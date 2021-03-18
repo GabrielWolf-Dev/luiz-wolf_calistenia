@@ -8,12 +8,12 @@ export const Container = styled.div`
 `;
 
 export const IconAdjust = styled(FontAwesomeIcon)`
-    color: white;
-    font-size: 3rem;
+    color: ${({ theme }) => theme.menuFooter_Content};
+    font-size: 2.7rem;
     cursor: pointer;
     transition: all ease 0.3s;
 
     :hover{
-        color: ${({ theme }) => theme.flashyColor};
-    } 
+        color: ${({ theme }) => theme.menuFooter_ContentHover};
+    }
 `;
