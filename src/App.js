@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import GlobalStyle from './GloblaStyle';
+import Header from './Components/Header';
+import { darkTheme, lightTheme } from './Components/UI/theme';
 
 function App() {
+  const [theme, setTheme] = useState(true);
+
+  function toggleTheme() {
+    setTheme(!theme);
+  }
+
   return (
-    <div>
-      <h1>Teste</h1>
-    </div>
+    <ThemeProvider theme={theme ? lightTheme : darkTheme}>
+      <Header toggleTheme={toggleTheme} />
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 
