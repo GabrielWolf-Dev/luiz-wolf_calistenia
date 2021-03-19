@@ -21,5 +21,6 @@ module.exports = {
     'linebreak-style': 'off',
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
   },
 };
