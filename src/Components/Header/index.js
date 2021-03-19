@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-import { IconAdjust } from '../UI';
+import { Icons } from '../UI';
 import logoLight from '../../assets/img/logoLight.png';
 import logoDark from '../../assets/img/logoDark.png';
 
@@ -18,8 +18,16 @@ const BgHeader = styled.header`
   margin-bottom: 48px;
 `;
 
+const IconAdjust = styled(Icons)`
+  color: ${({ theme }) => theme.menuFooter_Content};
+
+  :hover {
+    color: ${({ theme }) => theme.menuFooter_ContentHover};
+  }
+`;
+
 const Menu = styled.nav`
-  width: 65%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -31,14 +31,14 @@ export const ImgCircle = styled.img`
     display: inline-block;
 `;
 
-export const IconAdjust = styled(FontAwesomeIcon)`
-    color: ${({ theme }) => theme.menuFooter_Content};
+export const Icons = styled(FontAwesomeIcon)`
     font-size: 2.7rem;
     cursor: pointer;
     transition: all ease 0.3s;
+    color: ${({ theme }) => theme.text};
 
-    :hover{
-        color: ${({ theme }) => theme.menuFooter_ContentHover};
+    :hover {
+        color: ${({ theme }) => theme.flashyColor};
     }
 `;
 
@@ -61,4 +61,23 @@ export const DefaultParagraph = styled.p`
     padding: 16px 2%;
     color: ${({ theme }) => theme.text};
     text-align: left;
+`;
+
+export const DefaultButton = styled.button`
+    width: 100%;
+    max-width: 160px;
+    height: 42px;
+    border: 0;
+    border-radius: 12px;
+    background-color: ${({ theme }) => theme.flashyColor};  
+    color: #333333;
+    margin: 16px 24px;
+    cursor: pointer;
+`;
+
+export const Line = styled.hr`
+    width: 80%;
+    margin: 96px auto 0 auto;
+    border: 2px solid #333333;
+    border-radius: 50%;
 `;
