@@ -7,19 +7,14 @@ import {
   ImgSections,
   DefaultParagraph,
   TitleContentSections,
+  SectionContent,
 } from '../UI';
 
-const SectionWhatIsBox = styled(Box)`
+const WhatIsBox = styled(Box)`
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: ${({ theme }) => theme.alternativeBg};
-`;
-
-const SectionWhatIsContent = styled.div`
-  width: 100%;
-  max-width: 700px;
-  padding: 48px 2%;
 `;
 
 const TitleContent = styled(TitleContentSections)`
@@ -32,9 +27,9 @@ const OtherParagraph = styled(DefaultParagraph)`
 
 export default function SectionWhatIs() {
   return (
-    <SectionWhatIsBox>
+    <WhatIsBox>
       <ImgSections src={whatIsCalisthenics} alt="Atleta calistênico fazendo o movimento chamado parada de mão" />
-      <SectionWhatIsContent>
+      <SectionContent>
         <TitleContent>O que é calistenia?</TitleContent>
         <OtherParagraph>
           Resumidamente a calistenia é um esporte aonde você utiliza
@@ -56,7 +51,7 @@ export default function SectionWhatIs() {
           Hoje a Calistenia é usada por outros esportes como o Crossfit,
           Funcional e Street Workout.
         </OtherParagraph>
-      </SectionWhatIsContent>
-    </SectionWhatIsBox>
+      </SectionContent>
+    </WhatIsBox>
   );
 }

@@ -11,7 +11,7 @@ const BgHeader = styled.header`
   width: 100%;
   padding: 20px 2%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.menuFooter};
   box-shadow: 2px 2px 20px #333333;
@@ -19,6 +19,11 @@ const BgHeader = styled.header`
 `;
 
 const Menu = styled.nav`
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
   li {
     display: inline-block;
     margin: 0 24px;
@@ -45,6 +50,9 @@ export default function Header({ toggleTheme, theme }) {
     <BgHeader>
       <MenuLinks to="/"><img alt="Iustração de um lobo como uma logo do site" src={theme ? logoLight : logoDark} /></MenuLinks>
       <Menu>
+        <BtnTheme aria-label="Trocar de tema" onKeyUp={(event) => (event.code === 'Enter' ? toggleTheme() : null)}>
+          <IconAdjust onClick={toggleTheme} icon={faAdjust} />
+        </BtnTheme>
         <ul>
           <li><MenuLinks to="#sobre">Sobre</MenuLinks></li>
           <li><MenuLinks to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>
@@ -53,9 +61,6 @@ export default function Header({ toggleTheme, theme }) {
           <li><MenuLinks to="#Contato">Contato</MenuLinks></li>
         </ul>
       </Menu>
-      <BtnTheme aria-label="Trocar de tema" onKeyUp={(event) => (event.code === 'Enter' ? toggleTheme() : null)}>
-        <IconAdjust onClick={toggleTheme} icon={faAdjust} />
-      </BtnTheme>
     </BgHeader>
   );
 }

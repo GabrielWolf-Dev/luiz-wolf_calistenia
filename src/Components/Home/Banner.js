@@ -6,6 +6,7 @@ import { Container, Box, ImgCircle } from '../UI';
 
 const BannerBox = styled(Box)`
   background-color: ${({ theme }) => theme.mainBg};
+  margin: 144px 0;
 `;
 
 const Title = styled.h1`
@@ -19,7 +20,6 @@ const Phrase = styled.h2`
   font-size: 1.75rem;
   font-weight: 500;
   color: ${({ theme }) => theme.text};
-  margin-bottom: 48px;
 `;
 
 export default function Banner() {
