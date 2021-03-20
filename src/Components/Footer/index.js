@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { Container } from '../UI';
+import { cianDark, white } from '../UI/variables';
 
 const FooterBox = styled.footer`
     width: 100%;
     padding: 20px 2%;
-    background-color: ${({ theme }) => theme.menuFooter};
+    background-color: ${cianDark};
     margin-top: 48px;
 `;
 
@@ -22,17 +23,17 @@ const ContactDev = styled.div`
     p {
         font-size: 1.13rem;
         font-weight: 400;
-        color: ${({ theme }) => theme.menuFooter_Content};
+        color: ${white};
     }
 
     a {
         font-size: 2rem;
-        color: ${({ theme }) => theme.menuFooter_Content};
+        color: ${white};
         transition: all ease 0.3s;
     }
 
     a:hover {
-        color: ${({ theme }) => theme.menuFooter_ContentHover};
+        color: ${({ theme }) => theme.flashyColor};
     }
 `;
 
@@ -42,20 +43,20 @@ const Contribution = styled.div`
   }
 
   li div {
-    color: ${({ theme }) => theme.menuFooter_Content};
+    color: ${white};
     font-size: 1.13rem;
     font-weight: 400;
   }
 
   a {
       font-size: 1.13rem;
-      color: ${({ theme }) => theme.menuFooter_Content};
+      color: ${white};
       font-weight: 400;
       transition: all ease 0.3s;
   }
 
   a:hover {
-      color: ${({ theme }) => theme.menuFooter_ContentHover};
+      color: ${({ theme }) => theme.flashyColor};
   }
 
   span {

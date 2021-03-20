@@ -78,6 +78,6 @@ export const DefaultButton = styled.button`
 export const Line = styled.hr`
     width: 80%;
     margin: 96px auto 0 auto;
-    border: 2px solid #333333;
+    border: 2px solid ${({ theme }) => theme.flashyColor};
     border-radius: 50%;
 `;

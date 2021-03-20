@@ -5,9 +5,6 @@ export const darkTheme = {
   mainBg: colors.black,
   alternativeBg: colors.cianDark,
   flashyColor: colors.blueWhite,
-  menuFooter: colors.blueWhite,
-  menuFooter_Content: colors.black,
-  menuFooter_ContentHover: colors.white,
 };
 
 export const lightTheme = {
@@ -15,7 +12,4 @@ export const lightTheme = {
   mainBg: colors.white,
   alternativeBg: colors.cianDark,
   flashyColor: colors.greenWhite,
-  menuFooter: colors.cianDark,
-  menuFooter_Content: colors.white,
-  menuFooter_ContentHover: colors.greenWhite,
 };
