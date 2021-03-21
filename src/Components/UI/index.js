@@ -17,11 +17,13 @@ export const ImgSections = styled.img`
     width: 100%;
     max-width: 500px;
     height: 100%;
-`;
 
-export const ImgShapes = styled.img`
-    width: 100%;
-    height: 320px;
+    @media screen and (max-width: 1280px) {
+        max-width: 250px;
+        height: 350px;
+        border-radius: 12px;
+        margin-top: 48px;
+    }
 `;
 
 export const ImgCircle = styled.img`
@@ -29,6 +31,11 @@ export const ImgCircle = styled.img`
     max-width: 250px;
     height: 250px;
     display: inline-block;
+
+    @media screen and (max-width: 1280px) {
+        max-width: 170px;
+        height: 170px; 
+    }
 `;
 
 export const Icons = styled(FontAwesomeIcon)`
@@ -46,6 +53,10 @@ export const SectionContent = styled.div`
     width: 100%;
     max-width: 700px;
     padding: 48px 2%;
+
+    @media screen and (max-width: 1280px) {
+        max-width: 400px;
+    }
 `;
 
 export const TitleContentSections = styled.h2`
@@ -53,6 +64,7 @@ export const TitleContentSections = styled.h2`
     font-weight: 500;
     text-align: center;
     color: ${({ theme }) => theme.text};
+    padding: 0 2%;
 `;
 
 export const DefaultParagraph = styled.p`

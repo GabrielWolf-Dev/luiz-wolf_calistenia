@@ -15,6 +15,13 @@ const RelationBox = styled(Box)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: ${({ theme }) => theme.alternativeBg};
+
+  @media screen and (max-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const TitleContent = styled(TitleContentSections)`

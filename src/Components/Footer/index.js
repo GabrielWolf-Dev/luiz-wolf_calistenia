@@ -17,6 +17,11 @@ const ContainerFooter = styled(Container)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 1280px) {
+      justify-content: center;
+      flex-direction: column;
+    }
 `;
 
 const ContactDev = styled.div`
@@ -66,7 +71,7 @@ const Contribution = styled.div`
 
 export default function Footer() {
   return (
-    <FooterBox>
+    <FooterBox id="Contato">
       <ContainerFooter>
         <ContactDev>
           <p>

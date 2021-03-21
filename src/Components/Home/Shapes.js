@@ -5,7 +5,6 @@ import {
   Container,
   Box,
   TitleContentSections,
-  ImgShapes,
 } from '../UI';
 import verissimo from '../../assets/img/verissimo.png';
 import pinho from '../../assets/img/pinho.png';
@@ -25,6 +24,24 @@ const BoxImgs = styled(Box)`
     font-size: 1.15rem;
     font-weight: lighter;
   }
+
+  @media screen and (max-width: 1280px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+`;
+
+export const ImgShapes = styled.img`
+    width: 100%;
+    height: 320px;
+    padding-right: 24px;
+
+    @media screen and (max-width: 1280px) {
+        width: 230px;
+        height: 230px;
+        padding: 0 2%;
+        margin: 16px 0;
+    }
 `;
 
 export default function Shapes() {

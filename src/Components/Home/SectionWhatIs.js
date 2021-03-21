@@ -15,6 +15,13 @@ const WhatIsBox = styled(Box)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: ${({ theme }) => theme.alternativeBg};
+
+  @media screen and (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const TitleContent = styled(TitleContentSections)`
@@ -27,7 +34,7 @@ const OtherParagraph = styled(DefaultParagraph)`
 
 export default function SectionWhatIs() {
   return (
-    <WhatIsBox>
+    <WhatIsBox id="Sobre">
       <ImgSections src={whatIsCalisthenics} alt="Atleta calistênico fazendo o movimento chamado parada de mão" />
       <SectionContent>
         <TitleContent>O que é calistenia?</TitleContent>

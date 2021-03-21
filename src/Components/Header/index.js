@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { faAdjust, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
@@ -61,13 +62,25 @@ const IconBarMenu = styled(Icons)`
 `;
 
 const MenuDesktop = styled.ul`
+  a {
+    color: ${white};
+    font-size: 1.38rem;
+    transition: all ease 0.3s;
+  }
+  
+  a:hover {
+    color: ${({ theme }) => theme.flashyColor};
+  }
+
   @media screen and (max-width: 1280px) {
     display: none;
+    text-decoration: none;
+    color: ${({ theme }) => theme.text};
   }
 `;
 
 const MenuMobile = styled.ul`
-  width: 0;
+  width: 100%;
   max-width: 450px;
   height: 100vh;
   position: fixed;
@@ -75,8 +88,19 @@ const MenuMobile = styled.ul`
   right: 0;
   background-color: ${({ theme }) => theme.mainBg};
   box-shadow: 5px 5px 20px #333333;
-  opacity: 0;
-  transition: 0.75s;
+  z-index: 1;
+  opacity: 1;
+
+  a {
+    font-size: 1.38rem;
+    transition: all ease 0.3s;
+    text-decoration: none;
+    color: ${({ theme }) => theme.text};
+  }
+  
+  a:hover {
+    color: ${({ theme }) => theme.flashyColor};
+  }
 
   li {
     display: block;
@@ -86,9 +110,8 @@ const MenuMobile = styled.ul`
     border-bottom: 2px solid ${({ theme }) => theme.text};
   }
 
-  &.openMenu {
-    opacity: 1;
-    width: 100%;
+  @media screen and (max-width: 420px) {
+    max-width: 100%;
   }
 `;
 
@@ -127,6 +150,16 @@ const Btn = styled.button`
   background-color: ${({ theme }) => theme.menuFooter};
 `;
 
+const BoxBgMenu = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+`;
+
 export default function Header({ toggleTheme, theme }) {
   const [open, setOpen] = useState(false);
 
@@ -134,8 +167,33 @@ export default function Header({ toggleTheme, theme }) {
     setOpen(!open);
   }
 
+  function toggleSmoothLinks(event) {
+    event.preventDefault();
+    const tagA = event.target;
+    const id = tagA.getAttribute('href');
+    const to = document.querySelector(id).offsetTop;
+
+    window.scroll({
+      top: to - 80,
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <BgHeader>
+      <BoxBgMenu
+        onClick={toggleMenu}
+        as={motion.div}
+        variants={{
+          show: { width: '100vw', height: '100vh', opacity: 1 },
+          hidden: { width: '0vw', height: '100vh', opacity: 0 },
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        initial="hidden"
+        animate={open === true ? 'show' : 'hidden'}
+      />
       <MenuLinks to="/"><img alt="Iustração de um lobo como uma logo do site" src={theme ? logoLight : logoDark} /></MenuLinks>
       <Menu>
         <Btn aria-label="Trocar de tema" onKeyUp={(event) => (event.code === 'Enter' ? toggleTheme() : null)}>
@@ -143,21 +201,32 @@ export default function Header({ toggleTheme, theme }) {
         </Btn>
         <IconBarMenu onClick={toggleMenu} aria-label="Botão para abrir o menu de navegação" icon={faBars} />
         <MenuDesktop>
-          <li><MenuLinks to="#sobre">Sobre</MenuLinks></li>
+          <li><a onClick={toggleSmoothLinks} href="#Sobre">Sobre</a></li>
           <li><MenuLinks to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>
           <li><MenuLinks to="/produtos">Produtos</MenuLinks></li>
           <li><MenuLinks to="/e-books">E-Books</MenuLinks></li>
-          <li><MenuLinks to="#Contato">Contato</MenuLinks></li>
+          <li><a onClick={toggleSmoothLinks} href="#Contato">Contato</a></li>
         </MenuDesktop>
-        <MenuMobile className={open ? 'openMenu' : ''}>
+        <MenuMobile
+          as={motion.div}
+          variants={{
+            show: { width: '100%' },
+            hidden: { width: '0%' },
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          initial="hidden"
+          animate={open === true ? 'show' : 'hidden'}
+        >
           <BoxIconCloseMenu>
             <IconCloseMenu icon={faTimes} onClick={toggleMenu} />
           </BoxIconCloseMenu>
-          <li><MenuLinks to="#sobre">Sobre</MenuLinks></li>
+          <li><a onClick={toggleSmoothLinks} href="#Sobre">Sobre</a></li>
           <li><MenuLinks to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>
           <li><MenuLinks to="/produtos">Produtos</MenuLinks></li>
           <li><MenuLinks to="/e-books">E-Books</MenuLinks></li>
-          <li><MenuLinks to="#Contato">Contato</MenuLinks></li>
+          <li><a onClick={toggleSmoothLinks} href="#Contato">Contato</a></li>
         </MenuMobile>
       </Menu>
     </BgHeader>

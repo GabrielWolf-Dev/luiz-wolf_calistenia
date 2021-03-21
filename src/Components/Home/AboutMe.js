@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
@@ -19,11 +20,34 @@ const ContainerAboutMe = styled(Container)`
     justify-content: space-between;
     align-items: center;
     margin: 48px auto;
+
+    .instaLinkMobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 1280px) {
+      justify-content: center;
+      flex-direction: column;
+
+      .instaLinkDesktop {
+        display: none;
+      }
+
+      .instaLinkMobile {
+        display: block;
+      }
+    }
+`;
+
+const FigCaptionImg = styled.figcaption`
+  width: 100%;
+  text-align: right;
 `;
 
 const ImgLuiz = styled(ImgCircle)`
     max-width: 300px;
     height: 300px;
+    margin: 0 4%;
 `;
 
 const IconInsta = styled(Icons)`
@@ -36,7 +60,14 @@ export default function AboutMe() {
     <>
       <Line />
       <ContainerAboutMe>
-        <ImgLuiz src={imgLuiz} alt="Foto do Luiz Miguel andando numa praça" />
+        <figure>
+          <ImgLuiz src={imgLuiz} alt="Foto do Luiz Miguel andando numa praça" />
+          <FigCaptionImg>
+            <a className="instaLinkMobile" target="__blank" href="https://www.instagram.com/luizmiguelwolf/">
+              <IconInsta icon={faInstagram} />
+            </a>
+          </FigCaptionImg>
+        </figure>
         <SectionContent>
           <TitleContentSections>Quem sou eu?</TitleContentSections>
           <DefaultParagraph>
@@ -52,9 +83,15 @@ export default function AboutMe() {
             conseguindo ao mesmo tempo ter um bom domínio corporal
             e claro sempre visando saúde e longevidade no esporte.
           </DefaultParagraph>
-          <DefaultButton>Treinos</DefaultButton>
-          <DefaultButton>Produtos</DefaultButton>
-          <IconInsta icon={faInstagram} />
+          <Link to="/treinos-gratuitos">
+            <DefaultButton>Treinos</DefaultButton>
+          </Link>
+          <Link to="/produtos">
+            <DefaultButton>Produtos</DefaultButton>
+          </Link>
+          <a className="instaLinkDesktop" target="__blank" href="https://www.instagram.com/luizmiguelwolf/">
+            <IconInsta icon={faInstagram} />
+          </a>
         </SectionContent>
       </ContainerAboutMe>
     </>

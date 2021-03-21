@@ -16,6 +16,14 @@ const TargetBox = styled(Box)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 1280px) {
+      flex-direction: column;
+    }
+`;
+
+const SvgTargetAudience = styled(ImgSections)`
+  margin-top: 0;
 `;
 
 export default function TargetAudience({ theme }) {
@@ -38,8 +46,8 @@ export default function TargetAudience({ theme }) {
           </DefaultParagraph>
         </SectionContent>
         {
-          theme ? <ImgSections src={targetAudienceLight} alt="Ilustração de duas pessoas pensativas em definir um objetivo" />
-            : <ImgSections src={targetAudienceDark} alt="Ilustração de duas pessoas pensativas em definir um objetivo" />
+          theme ? <SvgTargetAudience src={targetAudienceLight} alt="Ilustração de duas pessoas pensativas em definir um objetivo" />
+            : <SvgTargetAudience src={targetAudienceDark} alt="Ilustração de duas pessoas pensativas em definir um objetivo" />
         }
       </TargetBox>
     </Container>
