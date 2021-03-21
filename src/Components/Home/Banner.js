@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -26,11 +27,47 @@ export default function Banner() {
   return (
     <BannerBox>
       <Container>
-        <ImgCircle src={imgBanner} alt="Foto do Luiz fazendo exercício na barra como um banner" />
-        <Title>
+        <ImgCircle
+          as={motion.img}
+          variants={{
+            show: { scale: 1, opacity: 1 },
+            hidden: { scale: 0, opacity: 0 },
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          initial="hidden"
+          animate="show"
+          src={imgBanner}
+          alt="Foto do Luiz fazendo exercício na barra como um banner"
+        />
+        <Title
+          as={motion.h1}
+          variants={{
+            show: { scale: 1, opacity: 1 },
+            hidden: { scale: 0, opacity: 0 },
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          initial="hidden"
+          animate="show"
+        >
           Luiz Wolf Calistenia
         </Title>
-        <Phrase>
+        <Phrase
+          as={motion.h2}
+          variants={{
+            show: { y: 0, opacity: 1 },
+            hidden: { y: 80, opacity: 0 },
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+          }}
+          initial="hidden"
+          animate="show"
+        >
           “Transforme seu corpo na sua própria academia”
         </Phrase>
       </Container>

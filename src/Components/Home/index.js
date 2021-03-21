@@ -9,13 +9,13 @@ import AboutMe from './AboutMe';
 
 export default function Home({ theme }) {
   return (
-    <>
+    <main>
       <Banner />
       <SectionWhatIs />
       <TargetAudience theme={theme} />
       <RelationSports />
       <Shapes />
       <AboutMe />
-    </>
+    </main>
   );
 }

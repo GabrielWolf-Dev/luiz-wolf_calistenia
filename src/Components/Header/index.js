@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { faAdjust, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -18,9 +18,15 @@ const BgHeader = styled.header`
   background-color: ${cianDark};
   box-shadow: 2px 2px 20px #333333;
   margin-bottom: 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 `;
 
 const IconAdjust = styled(Icons)`
+  width: 42px;
+  height: 42px;
   color: ${white};
   background-color: ${cianDark};
 
@@ -162,6 +168,22 @@ const BoxBgMenu = styled.div`
 
 export default function Header({ toggleTheme, theme }) {
   const [open, setOpen] = useState(false);
+  const [lastYPosition, setLastYPosition] = useState(0);
+  const [showMenu, setShowMenu] = useState(true);
+
+  useEffect(() => {
+    function scrollAnimate() {
+      const windowY = window.scrollY;
+      const scrollUp = windowY < lastYPosition;
+
+      setShowMenu(scrollUp);
+      setLastYPosition(windowY);
+    }
+
+    window.addEventListener('scroll', scrollAnimate, false);
+
+    return () => window.removeEventListener('scroll', scrollAnimate, false);
+  }, [lastYPosition]);
 
   function toggleMenu() {
     setOpen(!open);
@@ -180,7 +202,10 @@ export default function Header({ toggleTheme, theme }) {
   }
 
   return (
-    <BgHeader>
+    <BgHeader
+      as={motion.header}
+      animate={{ opacity: showMenu ? 1 : 0, display: showMenu ? 'flex' : 'none' }}
+    >
       <BoxBgMenu
         onClick={toggleMenu}
         as={motion.div}
@@ -208,7 +233,7 @@ export default function Header({ toggleTheme, theme }) {
           <li><a onClick={toggleSmoothLinks} href="#Contato">Contato</a></li>
         </MenuDesktop>
         <MenuMobile
-          as={motion.div}
+          as={motion.nav}
           variants={{
             show: { width: '100%' },
             hidden: { width: '0%' },

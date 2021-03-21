@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 import {
   Container,
@@ -27,10 +28,17 @@ const SvgTargetAudience = styled(ImgSections)`
 `;
 
 export default function TargetAudience({ theme }) {
+  const { scrollYProgress } = useViewportScroll();
+  const opacityValue = useTransform(scrollYProgress, (value) => value * 2.6);
   return (
     <Container>
       <TargetBox>
-        <SectionContent>
+        <SectionContent
+          as={motion.section}
+          style={{
+            opacity: opacityValue,
+          }}
+        >
           <TitleContentSections>Para quem é esse site?</TitleContentSections>
           <DefaultParagraph>
             Quero através desse site e do meu instagram ajudar principalmente os jovens em geral,

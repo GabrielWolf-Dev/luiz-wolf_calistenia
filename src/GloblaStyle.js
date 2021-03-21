@@ -8,10 +8,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Noto Sans JP', sans-serif;
         font-size: 16px;
     }
-    
-    html, body {
-        height: 100%;
-    }
 
     :root {
         font-size: 16px;
