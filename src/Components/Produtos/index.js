@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function Produtos() {
+import MainSection from './MainSection';
+import ListProducts from './ListProducts';
+import { Line } from '../UI';
+
+export default function Produtos({ theme, db }) {
   return (
-    <div>
-      Produtos
-    </div>
+    <main>
+      <MainSection theme={theme} />
+      <Line />
+      <ListProducts db={db} theme={theme} />
+    </main>
   );
 }

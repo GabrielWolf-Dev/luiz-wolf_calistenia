@@ -25,6 +25,11 @@ const TargetBox = styled(Box)`
 
 const SvgTargetAudience = styled(ImgSections)`
   margin-top: 0;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 400px;
+    height: 400px;
+  }
 `;
 
 export default function TargetAudience({ theme }) {

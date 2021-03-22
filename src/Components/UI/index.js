@@ -11,6 +11,8 @@ export const Container = styled.div`
 export const Box = styled.section`
     width: 100%;
     margin: 48px 0;
+    padding: 0 4%;
+    text-align: center;
 `;
 
 export const ImgSections = styled.img`
@@ -19,8 +21,8 @@ export const ImgSections = styled.img`
     height: 100%;
 
     @media screen and (max-width: 1280px) {
-        max-width: 250px;
-        height: 350px;
+        max-width: 300px;
+        height: 400px;
         border-radius: 12px;
         margin-top: 48px;
     }
@@ -92,4 +94,13 @@ export const Line = styled.hr`
     margin: 96px auto 0 auto;
     border: 2px solid ${({ theme }) => theme.flashyColor};
     border-radius: 50%;
+`;
+
+export const NotFoundMessage = styled.h3`
+    font-size: 1.65rem;
+    font-weight: 500;
+    text-align: center;
+    color: ${({ theme }) => theme.text};
+    padding: 0 2%;
+    margin: 32px 0 48px 0;
 `;

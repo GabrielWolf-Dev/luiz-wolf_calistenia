@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import db from './db.json';
+
 import GlobalStyle from './GloblaStyle';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -26,7 +28,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} theme={theme} />} />
           <Route path="/treinos-gratuitos" component={TreinosGratuitos} />
-          <Route path="/produtos" component={Produtos} />
+          <Route path="/produtos" render={(props) => <Produtos {...props} db={db} theme={theme} />} />
           <Route path="/e-books" component={Ebooks} />
         </Switch>
         <Footer />

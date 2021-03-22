@@ -34,7 +34,7 @@ export default function Banner() {
             hidden: { scale: 0, opacity: 0 },
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.8,
           }}
           initial="hidden"
           animate="show"
@@ -48,7 +48,7 @@ export default function Banner() {
             hidden: { scale: 0, opacity: 0 },
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.8,
           }}
           initial="hidden"
           animate="show"
@@ -62,7 +62,7 @@ export default function Banner() {
             hidden: { y: 80, opacity: 0 },
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.8,
             delay: 0.5,
           }}
           initial="hidden"

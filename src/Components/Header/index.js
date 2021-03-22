@@ -116,7 +116,7 @@ const MenuMobile = styled.ul`
     border-bottom: 2px solid ${({ theme }) => theme.text};
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 520px) {
     max-width: 100%;
   }
 `;
@@ -125,6 +125,7 @@ const BoxIconCloseMenu = styled(Box)`
   margin: 0;
   padding: 20px 2%;
   background-color: ${({ theme }) => theme.flashyColor};
+  text-align: left;
 `;
 
 const IconCloseMenu = styled(Icons)`

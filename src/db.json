@@ -1,0 +1,27 @@
+{
+    "existsProduct": false,
+    "products": [
+        {
+            "name": "Teste",
+            "img": "https://images.pexels.com/photos/2652236/pexels-photo-2652236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "descriptionImgProduct": "Produto",
+            "price": "22, 80",
+            "urlProduct": "https://www.buscape.com.br/search?q=halteres"
+        },
+        {
+            "name": "Teste",
+            "img": "https://images.pexels.com/photos/2652236/pexels-photo-2652236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "descriptionImgProduct": "Produto",
+            "price": "22, 80",
+            "urlProduct": "https://www.buscape.com.br/search?q=halteres"
+        }
+    ],
+    "ebooks": [
+        {
+            "name": "",
+            "img": "",
+            "descriptionImgEbook": "",
+            "urlPdf": ""
+        }
+    ]
+}

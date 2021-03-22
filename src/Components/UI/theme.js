@@ -5,6 +5,7 @@ export const darkTheme = {
   mainBg: colors.black,
   alternativeBg: colors.cianDark,
   flashyColor: colors.blueWhite,
+  bgBoxProduct: colors.cianDark,
 };
 
 export const lightTheme = {
@@ -12,4 +13,5 @@ export const lightTheme = {
   mainBg: colors.white,
   alternativeBg: colors.cianDark,
   flashyColor: colors.greenWhite,
+  bgBoxProduct: colors.gray,
 };
