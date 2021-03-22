@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/" render={(props) => <Home {...props} theme={theme} />} />
           <Route path="/treinos-gratuitos" component={TreinosGratuitos} />
           <Route path="/produtos" render={(props) => <Produtos {...props} db={db} theme={theme} />} />
-          <Route path="/e-books" component={Ebooks} />
+          <Route path="/e-books" render={(props) => <Ebooks {...props} db={db} theme={theme} />} />
         </Switch>
         <Footer />
       </Router>

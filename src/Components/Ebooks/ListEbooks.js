@@ -6,7 +6,6 @@ import {
   Box,
   Container,
   TitleContentSections,
-  DefaultParagraph,
   DefaultButton,
   ImgSections,
   NotFoundMessage,
@@ -14,14 +13,14 @@ import {
 import voidLight from '../../assets/svg/voidLight.svg';
 import voidDark from '../../assets/svg/voidDark.svg';
 
-const ContainerListProducts = styled(Container)`
+const ContainerListEbooks = styled(Container)`
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 `;
 
-const BoxProduct = styled.div`
+const BoxEbook = styled.div`
     width: 100%;
     max-width: 400px;
     background-color: ${({ theme }) => theme.bgBoxProduct};
@@ -34,7 +33,7 @@ const BoxProduct = styled.div`
     }
 `;
 
-const ImgProduct = styled.img`
+const ImgEbook = styled.img`
     width: 100%;
     max-width: 280px;
     height: 280px;
@@ -44,32 +43,25 @@ const ImgProduct = styled.img`
     border-radius: 12px;
 `;
 
-const Price = styled(DefaultParagraph)`
-    text-align: center;
-    padding-top: 8px;
-    padding: 0;
-`;
-
-const BtnProduct = styled(DefaultButton)`
+const BtnEbook = styled(DefaultButton)`
     margin: 32px 0;
 `;
 
-export default function ListProducts({ db, theme }) {
+export default function ListEbooks({ db, theme }) {
   const { scrollYProgress } = useViewportScroll();
   return (
     <Box>
-      <ContainerListProducts>
+      <ContainerListEbooks>
         {
             db.existsDatas === true
-              ? db.products.map((product) => (
-                <BoxProduct>
-                  <ImgProduct src={product.img} alt={product.descriptionImgProduct} />
-                  <TitleContentSections>{ product.name }</TitleContentSections>
-                  <Price>{ product.price }</Price>
-                  <BtnProduct>
-                    <a href={product.urlProduct}>Acessar</a>
-                  </BtnProduct>
-                </BoxProduct>
+              ? db.ebooks.map((ebook) => (
+                <BoxEbook>
+                  <ImgEbook src={ebook.img} alt={ebook.descriptionImgEbook} />
+                  <TitleContentSections>{ ebook.name }</TitleContentSections>
+                  <BtnEbook>
+                    <a href={ebook.urlPdf}>Acessar</a>
+                  </BtnEbook>
+                </BoxEbook>
               ))
               : (
                 <Container
@@ -77,16 +69,16 @@ export default function ListProducts({ db, theme }) {
                   style={{ scale: scrollYProgress }}
                 >
                   {
-                        theme ? <ImgSections src={voidLight} alt="Ilustração de uma pessoa em um local vazio" />
-                          : <ImgSections src={voidDark} alt="Ilustração de uma pessoa em um local vazio" />
-                    }
+                  theme ? <ImgSections src={voidLight} alt="Ilustração de uma pessoa em um local vazio" />
+                    : <ImgSections src={voidDark} alt="Ilustração de uma pessoa em um local vazio" />
+                }
                   <NotFoundMessage>
-                    No momento, não há produtos.
+                    No momento, não há E-books.
                   </NotFoundMessage>
                 </Container>
               )
         }
-      </ContainerListProducts>
+      </ContainerListEbooks>
     </Box>
   );
 }

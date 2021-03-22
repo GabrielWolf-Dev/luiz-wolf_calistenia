@@ -54,7 +54,7 @@ const AttentionParagraph = styled(DefaultParagraph)`
 
 export default function MainSection({ theme }) {
   return (
-    <BoxMSection>
+    <BoxMSection id="Sobre">
       <TitleContentSections
         as={motion.h2}
         variants={{
@@ -108,7 +108,7 @@ export default function MainSection({ theme }) {
             </ItemList>
           </ListProblems>
           <AttentionParagraph>
-            Por isso crie essa página! Aqui você conseguirá
+            Por isso criei essa página! Aqui você conseguirá
             alcançar todos os seus objetivos de maneira
             simples e 100% segura, e o melhor, com um preço totalmente acessível.
             E se você não gostar do produto tem uma garantia de até 7 dias

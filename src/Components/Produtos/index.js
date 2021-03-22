@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MainSection from './MainSection';
+import MainSection from './MainProduct';
 import ListProducts from './ListProducts';
 import { Line } from '../UI';
 
