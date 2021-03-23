@@ -1,10 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import {
-  Box,
-  Container,
+  BoxMargin,
+  ContainerFlex,
   TitleContentSections,
   ImgSections,
   SectionContent,
@@ -13,24 +12,9 @@ import {
 import womanTrainingLight from '../../assets/svg/womanTraningLight.svg';
 import womanTrainingDark from '../../assets/svg/womanTraningDark.svg';
 
-const BoxEbooks = styled(Box)`
-    margin: 128px 0 48px 0;
-`;
-
-const ContainerEbooks = styled(Container)`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media screen and (max-width: 1280px) {
-        justify-content: center;
-        flex-direction: column;
-    }
-`;
-
 export default function MainEbooks({ theme }) {
   return (
-    <BoxEbooks id="Sobre">
+    <BoxMargin id="Sobre">
       <TitleContentSections
         as={motion.h2}
         variants={{
@@ -43,7 +27,7 @@ export default function MainEbooks({ theme }) {
       >
         E-books
       </TitleContentSections>
-      <ContainerEbooks>
+      <ContainerFlex>
         {
             theme ? (
               <ImgSections
@@ -98,7 +82,7 @@ export default function MainEbooks({ theme }) {
             a área da saúde, fitness, calistenia e entre outros para vocês lerem.
           </DefaultParagraph>
         </SectionContent>
-      </ContainerEbooks>
-    </BoxEbooks>
+      </ContainerFlex>
+    </BoxMargin>
   );
 }

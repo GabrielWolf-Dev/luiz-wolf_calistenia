@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function TreinosGratuitos() {
+import { Line } from '../UI';
+import MainTreinos from './MainTreinos';
+import Videos from './Videos';
+
+export default function TreinosGratuitos({ theme }) {
   return (
-    <div>
-      TreinosGratuitos
-    </div>
+    <main>
+      <MainTreinos theme={theme} />
+      <Line />
+      <Videos />
+    </main>
   );
 }

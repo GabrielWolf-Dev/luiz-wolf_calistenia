@@ -27,7 +27,7 @@ function App() {
         <Header theme={theme} toggleTheme={toggleTheme} />
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} theme={theme} />} />
-          <Route path="/treinos-gratuitos" component={TreinosGratuitos} />
+          <Route path="/treinos-gratuitos" render={(props) => <TreinosGratuitos {...props} theme={theme} />} />
           <Route path="/produtos" render={(props) => <Produtos {...props} db={db} theme={theme} />} />
           <Route path="/e-books" render={(props) => <Ebooks {...props} db={db} theme={theme} />} />
         </Switch>

@@ -8,11 +8,30 @@ export const Container = styled.div`
     text-align: center;
 `;
 
+export const ContainerFlex = styled.div`
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 1280px) {
+        justify-content: center;
+        flex-direction: column;
+    }
+`;
+
 export const Box = styled.section`
     width: 100%;
     margin: 48px 0;
     padding: 0 4%;
     text-align: center;
+`;
+
+export const BoxMargin = styled(Box)`
+    margin: 128px 0 48px 0;
 `;
 
 export const ImgSections = styled.img`

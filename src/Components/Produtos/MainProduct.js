@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import {
-  Box,
-  Container,
+  BoxMargin,
+  ContainerFlex,
   TitleContentSections,
   SectionContent,
   DefaultParagraph,
@@ -12,21 +12,6 @@ import {
 } from '../UI';
 import ExerciseBenefitLight from '../../assets/svg/exerciseBenefitLight.svg';
 import ExerciseBenefitDark from '../../assets/svg/exerciseBenefitDark.svg';
-
-const BoxMSection = styled(Box)`
-    margin: 128px 0 48px 0;
-`;
-
-const ContainerMSection = styled(Container)`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media screen and (max-width: 1280px) {
-        justify-content: center;
-        flex-direction: column;
-    }
-`;
 
 const ListProblems = styled.ul`
     text-align: left;
@@ -54,7 +39,7 @@ const AttentionParagraph = styled(DefaultParagraph)`
 
 export default function MainSection({ theme }) {
   return (
-    <BoxMSection id="Sobre">
+    <BoxMargin id="Sobre">
       <TitleContentSections
         as={motion.h2}
         variants={{
@@ -67,7 +52,7 @@ export default function MainSection({ theme }) {
       >
         Produtos
       </TitleContentSections>
-      <ContainerMSection>
+      <ContainerFlex>
         <SectionContent
           as={motion.section}
           variants={{
@@ -151,7 +136,7 @@ export default function MainSection({ theme }) {
               />
             )
         }
-      </ContainerMSection>
-    </BoxMSection>
+      </ContainerFlex>
+    </BoxMargin>
   );
 }
