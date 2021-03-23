@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion, useViewportScroll } from 'framer-motion';
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 import {
   Box,
@@ -56,6 +56,7 @@ const BtnProduct = styled(DefaultButton)`
 
 export default function ListProducts({ db, theme }) {
   const { scrollYProgress } = useViewportScroll();
+  const scaleValue = useTransform(scrollYProgress, (value) => value / 1.1);
   return (
     <Box>
       <ContainerListProducts>
@@ -74,7 +75,7 @@ export default function ListProducts({ db, theme }) {
               : (
                 <Container
                   as={motion.div}
-                  style={{ scale: scrollYProgress }}
+                  style={{ scale: scaleValue }}
                 >
                   {
                         theme ? <ImgSections src={voidLight} alt="Ilustração de uma pessoa em um local vazio" />

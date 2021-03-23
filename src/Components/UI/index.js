@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const ContainerFlex = styled.div`
     width: 100%;
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -110,7 +110,7 @@ export const DefaultButton = styled.button`
 
 export const Line = styled.hr`
     width: 80%;
-    margin: 96px auto 0 auto;
+    margin: 96px auto 32px auto;
     border: 2px solid ${({ theme }) => theme.flashyColor};
     border-radius: 50%;
 `;

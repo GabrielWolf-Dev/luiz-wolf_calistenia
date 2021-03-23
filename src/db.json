@@ -23,5 +23,34 @@
             "descriptionImgEbook": "",
             "urlPdf": ""
         }
-    ]
+    ],
+    "trains": {
+        "type": "Corpo inteiro",
+        "exercises": [
+            {
+                "id": 0,
+                "exercise": "Barra fixa --> 12 repetições;"
+            },
+            {
+                "id": 1,
+                "exercise": "Flexões --> 20 repetições;"
+            },
+            {
+                "id": 3,
+                "exercise": "Burpes dinâmicos --> 20 repetições;"
+            },
+            {
+                "id": 4,
+                "exercise": "Burpes dinâmicos --> 20 repetições;"
+            },
+            {
+                "id": 5,
+                "exercise": "Agachamentos --> 30 repetições;"
+            },
+            {
+                "id": 6,
+                "exercise": "Prancha dinâmica --> 20 repetições."
+            }
+        ]
+    }
 }
