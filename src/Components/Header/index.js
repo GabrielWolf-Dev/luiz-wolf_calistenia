@@ -248,11 +248,11 @@ export default function Header({ toggleTheme, theme }) {
           <BoxIconCloseMenu>
             <IconCloseMenu icon={faTimes} onClick={toggleMenu} />
           </BoxIconCloseMenu>
-          <li><a onClick={toggleSmoothLinks} href="#Sobre">Sobre</a></li>
-          <li><MenuLinks to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>
-          <li><MenuLinks to="/produtos">Produtos</MenuLinks></li>
-          <li><MenuLinks to="/e-books">E-Books</MenuLinks></li>
-          <li><a onClick={toggleSmoothLinks} href="#Contato">Contato</a></li>
+          <li><a onClick={toggleMenu} href="#Sobre">Sobre</a></li>
+          <li><MenuLinks onClick={toggleMenu} to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>
+          <li><MenuLinks onClick={toggleMenu} to="/produtos">Produtos</MenuLinks></li>
+          <li><MenuLinks onClick={toggleMenu} to="/e-books">E-Books</MenuLinks></li>
+          <li><a onClick={toggleMenu} href="#Contato">Contato</a></li>
         </MenuMobile>
       </Menu>
     </BgHeader>

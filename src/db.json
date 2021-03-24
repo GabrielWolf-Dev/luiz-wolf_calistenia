@@ -2,18 +2,18 @@
     "existsDatas": false,
     "products": [
         {
-            "name": "Teste",
-            "img": "https://images.pexels.com/photos/2652236/pexels-photo-2652236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "descriptionImgProduct": "Produto",
-            "price": "22, 80",
-            "urlProduct": "https://www.buscape.com.br/search?q=halteres"
+            "name": "",
+            "img": "",
+            "descriptionImgProduct": "",
+            "price": "",
+            "urlProduct": ""
         },
         {
-            "name": "Teste",
-            "img": "https://images.pexels.com/photos/2652236/pexels-photo-2652236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "descriptionImgProduct": "Produto",
-            "price": "22, 80",
-            "urlProduct": "https://www.buscape.com.br/search?q=halteres"
+            "name": "",
+            "img": "",
+            "descriptionImgProduct": "",
+            "price": "",
+            "urlProduct": ""
         }
     ],
     "ebooks": [
@@ -27,7 +27,8 @@
     "trains": {
         "types": [
             "Corpo inteiro",
-            "Peito"
+            "Peito",
+            "Pernas"
         ],
         "exercisesCorpoInteiro": [
             {
@@ -79,6 +80,32 @@
             {
                 "id": 6,
                 "exercise": "Tríceps em bancos paralelos --> De 3 a 5 vezes com 10 a 15 repetições."
+            }
+        ],
+        "exercisesPernas": [
+            {
+                "id": 0,
+                "exercise": "Aquecimento: 25 repetições de agachamentos --> 4 vezes(Total de 100 repetições);"
+            },
+            {
+                "id": 1,
+                "exercise": "Pistol squat --> (4 a 8 repetições) de 3 a 5 vezes;"
+            },
+            {
+                "id": 3,
+                "exercise": "Agachamentos explosivos --> (8 a 12 repetições) de 3 a 5 vezes;"
+            },
+            {
+                "id": 4,
+                "exercise": "Agachamento búlgaro conjugado com 'Step ups' --> (10 a 15 repetições de cada) de 3 a 5 vezes;"
+            },
+            {
+                "id": 5,
+                "exercise": "Agachamentos fechados --> 33 repetições, 3 séries, total: 99 repetições"
+            },
+            {
+                "id": 6,
+                "exercise": "Elevação pélvica unilateral --> (10 a 15 repetições de cada) 3 a 5 vezes."
             }
         ]
     }

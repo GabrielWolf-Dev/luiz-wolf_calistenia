@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { white } from './variables';
+import { black, white } from './variables';
 
 export const Container = styled.div`
     width: 100%;
@@ -82,6 +82,23 @@ export const SectionContent = styled.div`
     }
 `;
 
+export const ContentTreinosDesktop = styled(SectionContent)`
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+`;
+
+export const ContentTreinosMobile = styled.div`
+    width: 100%;
+    max-width: 400px;
+    padding: 48px 2%;
+    display: none;
+
+    @media screen and (max-width: 1280px) {
+      display: block;
+    }
+`;
+
 export const TitleContentSections = styled.h2`
     font-size: 1.75rem;
     font-weight: 500;
@@ -108,6 +125,20 @@ export const DefaultButton = styled.button`
     color: #333333;
     margin: 16px 24px;
     cursor: pointer;
+`;
+
+export const BtnTreinosMobile = styled.button`
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px 4% 20px 2%;
+    border: 0;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.flashyColor};
+    color: ${black};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const Line = styled.hr`
@@ -182,5 +213,22 @@ export const ListExercises = styled.ul`
     font-weight: 400;
     padding: 16px 2%;
     color: ${({ theme }) => theme.text};
+  }
+`;
+
+export const ListExercisesMobile = styled(ListExercises)`
+  width: 100%;
+  height: 100%; 
+  background-color: ${({ theme }) => theme.flashyColor};
+  margin: 0 0;
+  border-radius: 0 0 12px 12px;
+
+  li {
+    color: ${black};
+    padding: 16px 4%;
+  }
+
+  li:last-child {
+    padding: 16px 4% 32px 4%;
   }
 `;
