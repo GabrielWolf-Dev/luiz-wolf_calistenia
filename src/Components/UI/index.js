@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { white } from './variables';
+
 export const Container = styled.div`
     width: 100%;
     max-width: 1280px;
@@ -122,4 +124,63 @@ export const NotFoundMessage = styled.h3`
     color: ${({ theme }) => theme.text};
     padding: 0 2%;
     margin: 32px 0 48px 0;
+`;
+
+export const BoxVideo = styled.div`
+  width: 100%;
+  max-width: 600px;
+  height: 800px;
+  position: relative;
+
+  @media screen and (max-width: 540px) {
+    max-width: 400px;
+    height: 600px;
+  }
+`;
+
+export const VideoPlayer = styled.video`
+  width: 100%;
+  height: 100%;
+`;
+
+export const NextBtn = styled(Icons)`
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  color: ${white};
+  z-index: 1;
+
+  :hover {
+    color: ${white};
+    opacity: 0.8;
+  }
+`;
+
+export const PrevBtn = styled(Icons)`
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  color: ${white};
+  z-index: 1;
+
+  :hover {
+    color: ${white};
+    opacity: 0.8;
+  }
+`;
+
+export const ListExercises = styled.ul`
+  list-style-type: circle;
+  list-style-position: inside;
+  margin: 16px 0;
+
+  li {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 16px 2%;
+    color: ${({ theme }) => theme.text};
+  }
 `;

@@ -25,8 +25,11 @@
         }
     ],
     "trains": {
-        "type": "Corpo inteiro",
-        "exercises": [
+        "types": [
+            "Corpo inteiro",
+            "Peito"
+        ],
+        "exercisesCorpoInteiro": [
             {
                 "id": 0,
                 "exercise": "Barra fixa --> 12 repetições;"
@@ -50,6 +53,32 @@
             {
                 "id": 6,
                 "exercise": "Prancha dinâmica --> 20 repetições."
+            }
+        ],
+        "exercisesPeito": [
+            {
+                "id": 0,
+                "exercise": "Flexão arqueiro --> De 3 a 5 vezes com 8 a 12 repetições cada braço;"
+            },
+            {
+                "id": 1,
+                "exercise": "Flexão explosiva --> De 3 a 5 vezes com 8 a 12 repetições;"
+            },
+            {
+                "id": 3,
+                "exercise": "Tri-Set(Flexão declinada, normal e inclinada) --> 3 vezes começando com 10 repetções e diminuindo de 2 em 2 até chegar a 2 repetições;"
+            },
+            {
+                "id": 4,
+                "exercise": "Flexão diamante --> De 3 a 5 vezes com 10 a 15 repetições;"
+            },
+            {
+                "id": 5,
+                "exercise": "Extensão de tríceps no banco --> De 3 a 5 vezes com 8 a 12 repetições;"
+            },
+            {
+                "id": 6,
+                "exercise": "Tríceps em bancos paralelos --> De 3 a 5 vezes com 10 a 15 repetições."
             }
         ]
     }
