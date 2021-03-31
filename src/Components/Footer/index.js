@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { Container } from '../UI';
 import { cianDark, white } from '../UI/variables';
@@ -35,6 +35,7 @@ const ContactDev = styled.div`
         font-size: 2rem;
         color: ${white};
         transition: all ease 0.3s;
+        margin: 0 16px;
     }
 
     a:hover {
@@ -80,6 +81,9 @@ export default function Footer() {
           </p>
           <a target="__blank" href="https://github.com/GabrielWolf-Dev">
             <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a target="__blank" href="https://www.linkedin.com/in/gabriel-wolf-176b0420a/">
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </ContactDev>
         <Contribution>

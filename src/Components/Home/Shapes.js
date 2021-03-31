@@ -9,6 +9,34 @@ import {
 import verissimo from '../../assets/img/verissimo.png';
 import pinho from '../../assets/img/pinho.png';
 import luizMesquita from '../../assets/img/luizMesquita.png';
+import killyan from '../../assets/img/killyan.png';
+
+const shapes = [
+  {
+    alt: 'Shape de Verissimo',
+    img: verissimo,
+    link: 'https://www.instagram.com/verissimotreinador/',
+    insta: '@verissimotreinador',
+  },
+  {
+    alt: 'Shape de Pinho',
+    img: pinho,
+    link: 'https://www.instagram.com/pinho.calistenia/',
+    insta: '@pinho.calistenia',
+  },
+  {
+    alt: 'Shape de Luiz Mesquita',
+    img: luizMesquita,
+    link: 'https://www.instagram.com/luizomesquita/',
+    insta: '@luizomesquita',
+  },
+  {
+    alt: 'Shape de Killyan',
+    img: killyan,
+    link: 'https://www.instagram.com/killyanscherk/',
+    insta: '@Killyanscherk',
+  },
+];
 
 const ContainerShapes = styled(Container)`
     max-width: 1400px;
@@ -52,24 +80,16 @@ export default function Shapes() {
           Dá para ter um corpo bonito na calistenia?
         </TitleContentSections>
         <BoxImgs>
-          <figure>
-            <ImgShapes src={verissimo} alt="Shape de Verissimo" />
-            <figcaption>
-              <a target="__blank" href="https://www.instagram.com/verissimotreinador/">@verissimotreinador</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <ImgShapes src={pinho} alt="Shape de Pinho" />
-            <figcaption>
-              <a target="__blank" href="https://www.instagram.com/pinho.calistenia/">@pinho.calistenia</a>
-            </figcaption>
-          </figure>
-          <figure>
-            <ImgShapes src={luizMesquita} alt="Shape de Luiz Mesquita" />
-            <figcaption>
-              <a target="__blank" href="https://www.instagram.com/luizomesquita/">@luizomesquita</a>
-            </figcaption>
-          </figure>
+          {
+            shapes.map((shape) => (
+              <figure key={shape}>
+                <ImgShapes src={shape.img} alt={shape.alt} />
+                <figcaption>
+                  <a target="__blank" href={shape.link}>{shape.insta}</a>
+                </figcaption>
+              </figure>
+            ))
+          }
         </BoxImgs>
       </ContainerShapes>
     </Box>

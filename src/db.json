@@ -28,7 +28,8 @@
         "types": [
             "Corpo inteiro",
             "Peito",
-            "Pernas"
+            "Pernas",
+            "Costas"
         ],
         "exercisesCorpoInteiro": [
             {
@@ -106,6 +107,36 @@
             {
                 "id": 6,
                 "exercise": "Elevação pélvica unilateral --> (10 a 15 repetições de cada) 3 a 5 vezes."
+            }
+        ],
+        "exercisesCostas": [
+            {
+                "id": 0,
+                "exercise": "Elevações em duck lever --> 5 a 8 repetições de 3 a 5 séries;"
+            },
+            {
+                "id": 1,
+                "exercise": "Muscle ups --> 5 a 8 repetições de 3 a 5 séries;"
+            },
+            {
+                "id": 3,
+                "exercise": "Barras pronadas --> 8 a 12 repetições de 3 a 5 séries;"
+            },
+            {
+                "id": 4,
+                "exercise": "Remada invertida em L --> 5 a 8 repetições de 3 a 5 séries;"
+            },
+            {
+                "id": 5,
+                "exercise": "Barra supinada --> 8 a 12 repetições de 3 a 5 séries;"
+            },
+            {
+                "id": 6,
+                "exercise": "Remadas australianas --> 10 a 15 repetições de 3 a 5 séries;"
+            },
+            {
+                "id": 7,
+                "exercise": "Bícpes testas nas paralelas --> 10 a 15 repetições de 3 a 5 séries"
             }
         ]
     }

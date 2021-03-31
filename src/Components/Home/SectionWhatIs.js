@@ -32,6 +32,14 @@ const OtherParagraph = styled(DefaultParagraph)`
     color: #F7F5F5;
 `;
 
+const PhraseGerman = styled.span`
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 16px 2%;
+  color: #F7F5F5;
+  text-align: left;
+`;
+
 export default function SectionWhatIs() {
   return (
     <WhatIsBox id="Sobre">
@@ -46,7 +54,10 @@ export default function SectionWhatIs() {
         </OtherParagraph>
         <OtherParagraph>
           Ela surgiu na Grécia antiga e foi difundida na França e Inglaterra no século XIX,
-          pelo Suíço Phoktion Heinrich Clias, que misturava a
+          pelo Suíço
+          {' '}
+          <PhraseGerman lang="de">Phoktion Heinrich Clias</PhraseGerman>
+          , que misturava a
           calistenia e ginástica olímpica no seu programa de exercícios.
         </OtherParagraph>
         <OtherParagraph>

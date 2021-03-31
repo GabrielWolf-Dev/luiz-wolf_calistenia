@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import db from './db.json';
 
 import GlobalStyle from './GloblaStyle';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import TreinosGratuitos from './components/TreinosGratuitos';
-import Produtos from './components/Produtos';
-import Ebooks from './components/Ebooks';
-import { darkTheme, lightTheme } from './components/UI/theme';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import TreinosGratuitos from './Components/TreinosGratuitos';
+import Produtos from './Components/Produtos';
+import Ebooks from './Components/Ebooks';
+import { darkTheme, lightTheme } from './Components/UI/theme';
 
 function App() {
   const [theme, setTheme] = useState(true);
