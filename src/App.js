@@ -17,11 +17,12 @@ import { darkTheme, lightTheme } from './Components/UI/theme';
 
 export default function App() {
   const [theme, setTheme] = useState(true);
+  // eslint-disable-next-line global-require
+  require('dotenv').config();
+  const id = process.env.REACT_APP_ID_GA;
 
   useEffect(() => {
-    // eslint-disable-next-line global-require
-    require('dotenv').config();
-    ReactGA.initialize(process.env.REACT_APP_ID_GA);
+    ReactGA.initialize(id);
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
