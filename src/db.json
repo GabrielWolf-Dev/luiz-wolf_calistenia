@@ -24,120 +24,134 @@
             "urlPdf": ""
         }
     ],
-    "trains": {
-        "types": [
-            "Corpo inteiro",
-            "Peito",
-            "Pernas",
-            "Costas"
-        ],
-        "exercisesCorpoInteiro": [
+    "trainings": [
             {
                 "id": 0,
-                "exercise": "Barra fixa --> 12 repetições;"
+                "type": "Corpo inteiro",
+                "video": "https://www.youtube.com/embed/YIMEaaBtkxQ?list=PLBT8hSQkQPgqnI6OGCWwFuQlYDjfhsE37",
+                "exercises": [
+                    {
+                        "id": 0,
+                        "exercise": "Barra fixa --> 12 repetições;"
+                    },
+                    {
+                        "id": 1,
+                        "exercise": "Flexões --> 20 repetições;"
+                    },
+                    {
+                        "id": 3,
+                        "exercise": "Burpes dinâmicos --> 20 repetições;"
+                    },
+                    {
+                        "id": 4,
+                        "exercise": "Burpes dinâmicos --> 20 repetições;"
+                    },
+                    {
+                        "id": 5,
+                        "exercise": "Agachamentos --> 30 repetições;"
+                    },
+                    {
+                        "id": 6,
+                        "exercise": "Prancha dinâmica --> 20 repetições."
+                    }
+                ]
             },
             {
                 "id": 1,
-                "exercise": "Flexões --> 20 repetições;"
+                "type": "Peito",
+                "video": "https://www.youtube.com/embed/F28-uJ2VkUU",
+                "exercises": [
+                    {
+                        "id": 0,
+                        "exercise": "Flexão arqueiro --> De 3 a 5 vezes com 8 a 12 repetições cada braço;"
+                    },
+                    {
+                        "id": 1,
+                        "exercise": "Flexão explosiva --> De 3 a 5 vezes com 8 a 12 repetições;"
+                    },
+                    {
+                        "id": 3,
+                        "exercise": "Tri-Set(Flexão declinada, normal e inclinada) --> 3 vezes começando com 10 repetções e diminuindo de 2 em 2 até chegar a 2 repetições;"
+                    },
+                    {
+                        "id": 4,
+                        "exercise": "Flexão diamante --> De 3 a 5 vezes com 10 a 15 repetições;"
+                    },
+                    {
+                        "id": 5,
+                        "exercise": "Extensão de tríceps no banco --> De 3 a 5 vezes com 8 a 12 repetições;"
+                    },
+                    {
+                        "id": 6,
+                        "exercise": "Tríceps em bancos paralelos --> De 3 a 5 vezes com 10 a 15 repetições."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Pernas",
+                "video": "https://www.youtube.com/embed/zWl083didLY",
+                "exercises": [
+                    {
+                        "id": 0,
+                        "exercise": "Aquecimento: 25 repetições de agachamentos --> 4 vezes(Total de 100 repetições);"
+                    },
+                    {
+                        "id": 1,
+                        "exercise": "Pistol squat --> (4 a 8 repetições) de 3 a 5 vezes;"
+                    },
+                    {
+                        "id": 3,
+                        "exercise": "Agachamentos explosivos --> (8 a 12 repetições) de 3 a 5 vezes;"
+                    },
+                    {
+                        "id": 4,
+                        "exercise": "Agachamento búlgaro conjugado com 'Step ups' --> (10 a 15 repetições de cada) de 3 a 5 vezes;"
+                    },
+                    {
+                        "id": 5,
+                        "exercise": "Agachamentos fechados --> 33 repetições, 3 séries, total: 99 repetições"
+                    },
+                    {
+                        "id": 6,
+                        "exercise": "Elevação pélvica unilateral --> (10 a 15 repetições de cada) 3 a 5 vezes."
+                    }
+                ]
             },
             {
                 "id": 3,
-                "exercise": "Burpes dinâmicos --> 20 repetições;"
-            },
-            {
-                "id": 4,
-                "exercise": "Burpes dinâmicos --> 20 repetições;"
-            },
-            {
-                "id": 5,
-                "exercise": "Agachamentos --> 30 repetições;"
-            },
-            {
-                "id": 6,
-                "exercise": "Prancha dinâmica --> 20 repetições."
-            }
-        ],
-        "exercisesPeito": [
-            {
-                "id": 0,
-                "exercise": "Flexão arqueiro --> De 3 a 5 vezes com 8 a 12 repetições cada braço;"
-            },
-            {
-                "id": 1,
-                "exercise": "Flexão explosiva --> De 3 a 5 vezes com 8 a 12 repetições;"
-            },
-            {
-                "id": 3,
-                "exercise": "Tri-Set(Flexão declinada, normal e inclinada) --> 3 vezes começando com 10 repetções e diminuindo de 2 em 2 até chegar a 2 repetições;"
-            },
-            {
-                "id": 4,
-                "exercise": "Flexão diamante --> De 3 a 5 vezes com 10 a 15 repetições;"
-            },
-            {
-                "id": 5,
-                "exercise": "Extensão de tríceps no banco --> De 3 a 5 vezes com 8 a 12 repetições;"
-            },
-            {
-                "id": 6,
-                "exercise": "Tríceps em bancos paralelos --> De 3 a 5 vezes com 10 a 15 repetições."
-            }
-        ],
-        "exercisesPernas": [
-            {
-                "id": 0,
-                "exercise": "Aquecimento: 25 repetições de agachamentos --> 4 vezes(Total de 100 repetições);"
-            },
-            {
-                "id": 1,
-                "exercise": "Pistol squat --> (4 a 8 repetições) de 3 a 5 vezes;"
-            },
-            {
-                "id": 3,
-                "exercise": "Agachamentos explosivos --> (8 a 12 repetições) de 3 a 5 vezes;"
-            },
-            {
-                "id": 4,
-                "exercise": "Agachamento búlgaro conjugado com 'Step ups' --> (10 a 15 repetições de cada) de 3 a 5 vezes;"
-            },
-            {
-                "id": 5,
-                "exercise": "Agachamentos fechados --> 33 repetições, 3 séries, total: 99 repetições"
-            },
-            {
-                "id": 6,
-                "exercise": "Elevação pélvica unilateral --> (10 a 15 repetições de cada) 3 a 5 vezes."
-            }
-        ],
-        "exercisesCostas": [
-            {
-                "id": 0,
-                "exercise": "Elevações em duck lever --> 5 a 8 repetições de 3 a 5 séries;"
-            },
-            {
-                "id": 1,
-                "exercise": "Muscle ups --> 5 a 8 repetições de 3 a 5 séries;"
-            },
-            {
-                "id": 3,
-                "exercise": "Barras pronadas --> 8 a 12 repetições de 3 a 5 séries;"
-            },
-            {
-                "id": 4,
-                "exercise": "Remada invertida em L --> 5 a 8 repetições de 3 a 5 séries;"
-            },
-            {
-                "id": 5,
-                "exercise": "Barra supinada --> 8 a 12 repetições de 3 a 5 séries;"
-            },
-            {
-                "id": 6,
-                "exercise": "Remadas australianas --> 10 a 15 repetições de 3 a 5 séries;"
-            },
-            {
-                "id": 7,
-                "exercise": "Bícpes testas nas paralelas --> 10 a 15 repetições de 3 a 5 séries"
+                "type": "Costas",
+                "video": "https://www.youtube.com/embed/3i4pMfWi4iU",
+                "exercises": [
+                    {
+                        "id": 0,
+                        "exercise": "Elevações em duck lever --> 5 a 8 repetições de 3 a 5 séries;"
+                    },
+                    {
+                        "id": 1,
+                        "exercise": "Muscle ups --> 5 a 8 repetições de 3 a 5 séries;"
+                    },
+                    {
+                        "id": 3,
+                        "exercise": "Barras pronadas --> 8 a 12 repetições de 3 a 5 séries;"
+                    },
+                    {
+                        "id": 4,
+                        "exercise": "Remada invertida em L --> 5 a 8 repetições de 3 a 5 séries;"
+                    },
+                    {
+                        "id": 5,
+                        "exercise": "Barra supinada --> 8 a 12 repetições de 3 a 5 séries;"
+                    },
+                    {
+                        "id": 6,
+                        "exercise": "Remadas australianas --> 10 a 15 repetições de 3 a 5 séries;"
+                    },
+                    {
+                        "id": 7,
+                        "exercise": "Bícpes testas nas paralelas --> 10 a 15 repetições de 3 a 5 séries"
+                    }
+                ]
             }
         ]
-    }
 }

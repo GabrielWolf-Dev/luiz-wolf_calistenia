@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { black, white } from './variables';
+import { black } from './variables';
 
 export const Container = styled.div`
     width: 100%;
@@ -167,39 +167,17 @@ export const BoxVideo = styled.div`
     max-width: 400px;
     height: 600px;
   }
+
+  @media screen and (max-width: 540px) {
+    max-width: 350px;
+    height: 400px;
+  }
 `;
 
-export const VideoPlayer = styled.video`
+export const VideoPlayer = styled.iframe`
   width: 100%;
+  max-width: 600px;
   height: 100%;
-`;
-
-export const NextBtn = styled(Icons)`
-  position: absolute;
-  top: 50%;
-  right: 4%;
-  transform: translateY(-50%);
-  color: ${white};
-  z-index: 1;
-
-  :hover {
-    color: ${white};
-    opacity: 0.8;
-  }
-`;
-
-export const PrevBtn = styled(Icons)`
-  position: absolute;
-  top: 50%;
-  left: 4%;
-  transform: translateY(-50%);
-  color: ${white};
-  z-index: 1;
-
-  :hover {
-    color: ${white};
-    opacity: 0.8;
-  }
 `;
 
 export const ListExercises = styled.ul`

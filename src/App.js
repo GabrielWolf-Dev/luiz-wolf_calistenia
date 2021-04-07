@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import db from './db.json';
 
@@ -14,8 +15,15 @@ import Ebooks from './Components/Ebooks';
 import Error404 from './Components/404';
 import { darkTheme, lightTheme } from './Components/UI/theme';
 
-function App() {
+export default function App() {
   const [theme, setTheme] = useState(true);
+
+  useEffect(() => {
+    // eslint-disable-next-line global-require
+    require('dotenv').config();
+    ReactGA.initialize(process.env.REACT_APP_ID_GA);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   function toggleTheme() {
     setTheme(!theme);
@@ -38,5 +46,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;
