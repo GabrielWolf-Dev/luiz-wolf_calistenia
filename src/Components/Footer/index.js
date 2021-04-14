@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -29,6 +30,9 @@ const ContactDev = styled.div`
         font-size: 1.13rem;
         font-weight: 400;
         color: ${white};
+        display: inline-block;
+        margin: 0 24px 16px 0;
+        vertical-align: middle;
     }
 
     a {
@@ -43,31 +47,15 @@ const ContactDev = styled.div`
     }
 `;
 
-const Contribution = styled.div`
-  li {
-      margin: 16px 0;
-  }
-
-  li div {
-    color: ${white};
+const CreditsLink = styled(Link)`
     font-size: 1.13rem;
+    color: ${white};
     font-weight: 400;
-  }
+    transition: all ease 0.3s;
 
-  a {
-      font-size: 1.13rem;
-      color: ${white};
-      font-weight: 400;
-      transition: all ease 0.3s;
-  }
-
-  a:hover {
-      color: ${({ theme }) => theme.flashyColor};
-  }
-
-  span {
-    margin: 0 4px;
-  }
+    &:hover{
+        color: ${({ theme }) => theme.flashyColor};
+    }
 `;
 
 export default function Footer() {
@@ -82,27 +70,11 @@ export default function Footer() {
           <a target="__blank" href="https://github.com/GabrielWolf-Dev">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a target="__blank" href="https://www.linkedin.com/in/gabriel-wolf-176b0420a/">
+          <a target="__blank" href="https://www.linkedin.com/in/gabriel-wolf-frontend/">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </ContactDev>
-        <Contribution>
-          <ul>
-            <li><a target="__blank" href="https://undraw.co">Vetores utilizados no undraw</a></li>
-            <li><a target="__blank" href="https://www.pexels.com/pt-br/foto/ativo-movimentado-atividade-acao-4048236/">Foto de Niko Twisty no Pexels</a></li>
-            <li><a target="__blank" href="https://www.pexels.com/pt-br/foto/black-dumbbell-lot-260352/">Foto de Pixabay no Pexels Halteres</a></li>
-            <li><a target="__blank" href="https://fontawesome.com/icons?d=gallery&p=2">Ícones utilizados no Font Awesome</a></li>
-            <li>
-              <div>
-                Icons made by
-                <span><a target="__blank" href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a></span>
-                {' '}
-                from
-                <span><a target="__blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span>
-              </div>
-            </li>
-          </ul>
-        </Contribution>
+        <CreditsLink to="/creditos">Creditos</CreditsLink>
       </ContainerFooter>
     </FooterBox>
   );

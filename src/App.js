@@ -12,6 +12,7 @@ import Home from './Components/Home';
 import TreinosGratuitos from './Components/TreinosGratuitos';
 import Produtos from './Components/Produtos';
 import Ebooks from './Components/Ebooks';
+import Credits from './Components/Credits';
 import Error404 from './Components/404';
 import { darkTheme, lightTheme } from './Components/UI/theme';
 
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/treinos-gratuitos" render={(props) => <TreinosGratuitos {...props} db={db} theme={theme} />} />
           <Route path="/produtos" render={(props) => <Produtos {...props} db={db} theme={theme} />} />
           <Route path="/e-books" render={(props) => <Ebooks {...props} db={db} theme={theme} />} />
+          <Route path="/creditos" render={(props) => <Credits theme={theme} {...props} />} />
           <Route render={(props) => <Error404 {...props} theme={theme} />} />
         </Switch>
         <Footer />

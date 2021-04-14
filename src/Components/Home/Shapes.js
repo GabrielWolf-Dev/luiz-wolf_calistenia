@@ -13,24 +13,28 @@ import killyan from '../../assets/img/killyan.png';
 
 const shapes = [
   {
+    id: 0,
     alt: 'Shape de Verissimo',
     img: verissimo,
     link: 'https://www.instagram.com/verissimotreinador/',
     insta: '@verissimotreinador',
   },
   {
+    id: 1,
     alt: 'Shape de Pinho',
     img: pinho,
     link: 'https://www.instagram.com/pinho.calistenia/',
     insta: '@pinho.calistenia',
   },
   {
+    id: 2,
     alt: 'Shape de Luiz Mesquita',
     img: luizMesquita,
     link: 'https://www.instagram.com/luizomesquita/',
     insta: '@luizomesquita',
   },
   {
+    id: 3,
     alt: 'Shape de Killyan',
     img: killyan,
     link: 'https://www.instagram.com/killyanscherk/',
@@ -82,7 +86,7 @@ export default function Shapes() {
         <BoxImgs>
           {
             shapes.map((shape) => (
-              <figure key={shape}>
+              <figure key={shape.id}>
                 <ImgShapes src={shape.img} alt={shape.alt} />
                 <figcaption>
                   <a target="__blank" href={shape.link}>{shape.insta}</a>

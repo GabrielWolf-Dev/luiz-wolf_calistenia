@@ -17,6 +17,13 @@ const BoxMTreinos = styled(Box)`
     margin: 128px 0 48px 0;
 `;
 
+const LinkInsta = styled.a`
+  color: ${({ theme }) => theme.text};
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 16px 2%;
+`;
+
 export default function MainTreinos({ theme }) {
   return (
     <BoxMTreinos id="Sobre">
@@ -55,6 +62,17 @@ export default function MainTreinos({ theme }) {
                     <ImgSections
                       src={playlistTrainDark}
                       alt="Mulher acompanhando um treino de um serviço online"
+                      as={motion.img}
+                      variants={{
+                        show: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: -60 },
+                      }}
+                      transition={{
+                        duration: 0.6,
+                        delay: 0.8,
+                      }}
+                      initial="hidden"
+                      animate="show"
                     />
                   )
             }
@@ -91,17 +109,11 @@ export default function MainTreinos({ theme }) {
           >
             Se você quiser mais treinos e dicas é só me seguir no instagram
             {' '}
-            <a
-              style={{
-                fontSize: '1.4rem',
-                fontWeight: '400',
-                padding: '16px 2%',
-                color: '#333333',
-              }}
+            <LinkInsta
               href="https://www.instagram.com/luizmiguelwolf/"
             >
               @luizmiguelwolf
-            </a>
+            </LinkInsta>
             ,
             lá você também terá mais interação comigo.
           </DefaultParagraph>

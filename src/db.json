@@ -59,31 +59,31 @@
             {
                 "id": 1,
                 "type": "Peito",
-                "video": "https://www.youtube.com/embed/F28-uJ2VkUU",
+                "video": "https://www.youtube.com/embed/_FdswMTobi0",
                 "exercises": [
                     {
                         "id": 0,
-                        "exercise": "Flexão arqueiro --> De 3 a 5 vezes com 8 a 12 repetições cada braço;"
+                        "exercise": "Parada de mão --> 5 a 10 minutos de tentativas e progressões;"
                     },
                     {
                         "id": 1,
-                        "exercise": "Flexão explosiva --> De 3 a 5 vezes com 8 a 12 repetições;"
+                        "exercise": "Flexão explosiva tocando o banco --> 8 a 10 repetições (3 a 5 séries);"
                     },
                     {
                         "id": 3,
-                        "exercise": "Tri-Set(Flexão declinada, normal e inclinada) --> 3 vezes começando com 10 repetções e diminuindo de 2 em 2 até chegar a 2 repetições;"
+                        "exercise": "Dips nas paralelas + Pike push ups --> Repetições perto da falha (3 a 5 séries);"
                     },
                     {
                         "id": 4,
-                        "exercise": "Flexão diamante --> De 3 a 5 vezes com 10 a 15 repetições;"
+                        "exercise": "Dips na barra reta + Flexões declinadas --> Repetições perto da falha (3 a 5 séries);"
                     },
                     {
                         "id": 5,
-                        "exercise": "Extensão de tríceps no banco --> De 3 a 5 vezes com 8 a 12 repetições;"
+                        "exercise": "Flexões inclinadas em pirâmide --> 1 repetição = 1 segundo de isometria, 2 repetições = 2 segundos, ... (3 a 5 séries);"
                     },
                     {
                         "id": 6,
-                        "exercise": "Tríceps em bancos paralelos --> De 3 a 5 vezes com 10 a 15 repetições."
+                        "exercise": "Prancha dinâmica para lateral de ombro --> 10 a 15 repetições para cada braço (3 a 5 séries)."
                     }
                 ]
             },
