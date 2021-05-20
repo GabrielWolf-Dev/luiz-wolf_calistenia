@@ -28,11 +28,11 @@
             {
                 "id": 0,
                 "type": "Corpo inteiro",
-                "video": "https://www.youtube.com/embed/YIMEaaBtkxQ?list=PLBT8hSQkQPgqnI6OGCWwFuQlYDjfhsE37",
+                "video": "https://www.youtube.com/embed/oUkU1qSZ7cA",
                 "exercises": [
                     {
                         "id": 0,
-                        "exercise": "Barra fixa --> 12 repetições;"
+                        "exercise": "Barra fixa --> 10 repetições;"
                     },
                     {
                         "id": 1,
@@ -40,19 +40,23 @@
                     },
                     {
                         "id": 3,
-                        "exercise": "Burpes dinâmicos --> 20 repetições;"
+                        "exercise": "Barra supinada --> 10 repetições;"
                     },
                     {
                         "id": 4,
-                        "exercise": "Burpes dinâmicos --> 20 repetições;"
+                        "exercise": "Abdominal na barra --> 10 a 15 repetições;"
                     },
                     {
                         "id": 5,
-                        "exercise": "Agachamentos --> 30 repetições;"
+                        "exercise": "Agachamentos --> 20 a 30 repetições;"
                     },
                     {
                         "id": 6,
-                        "exercise": "Prancha dinâmica --> 20 repetições."
+                        "exercise": "Elevação plantar --> 20 repetições;"
+                    },
+                    {
+                        "id": 7,
+                        "exercise": "800 metros de corrida."
                     }
                 ]
             },

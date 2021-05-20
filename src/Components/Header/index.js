@@ -52,21 +52,6 @@ const Menu = styled.nav`
   }
 `;
 
-const IconBarMenu = styled(Icons)`
-  color: ${white};
-  background-color: ${cianDark};
-  display: none;
-
-  :hover {
-    color: ${({ theme }) => theme.flashyColor};
-  }
-
-  @media screen and (max-width: 1280px) {
-    display: block;
-    margin: 0 24px;
-  }
-`;
-
 const MenuDesktop = styled.ul`
   a {
     color: ${white};
@@ -121,6 +106,21 @@ const MenuMobile = styled.ul`
   }
 `;
 
+const BtnMenu = styled.button`
+  background-color: transparent;
+  display: none;
+  border: 0;
+
+  @media screen and (max-width: 1280px) {
+    display: block;
+    margin: 0 24px;
+  }
+`;
+
+const IconOpenMenu = styled(Icons)`
+  color: white;
+`;
+
 const BoxIconCloseMenu = styled(Box)`
   margin: 0;
   padding: 20px 2%;
@@ -130,7 +130,6 @@ const BoxIconCloseMenu = styled(Box)`
 
 const IconCloseMenu = styled(Icons)`
   color: ${black};
-  margin-left: 24px;
 
   :hover {
     color: ${black};
@@ -187,7 +186,9 @@ export default function Header({ toggleTheme, theme }) {
   }, [lastYPosition]);
 
   function toggleMenu() {
+    const closeMenu = document.querySelector('#closeMenu');
     setOpen(!open);
+    closeMenu.focus();
   }
 
   function toggleSmoothLinks(event) {
@@ -222,10 +223,18 @@ export default function Header({ toggleTheme, theme }) {
       />
       <MenuLinks to="/"><img alt="Iustração de um lobo como uma logo do site" src={theme ? logoLight : logoDark} /></MenuLinks>
       <Menu>
-        <Btn aria-label="Trocar de tema" onKeyUp={(event) => (event.code === 'Enter' ? toggleTheme() : null)}>
-          <IconAdjust onClick={toggleTheme} icon={faAdjust} />
+        <Btn aria-label={`Mudar para tema ${theme === true ? 'escuro' : 'claro'}`} onClick={toggleTheme}>
+          <IconAdjust icon={faAdjust} />
         </Btn>
-        <IconBarMenu onClick={toggleMenu} aria-label="Botão para abrir o menu de navegação" icon={faBars} />
+        <BtnMenu
+          onClick={toggleMenu}
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir o menu de navegação"
+        >
+          <IconOpenMenu icon={faBars} />
+        </BtnMenu>
         <MenuDesktop>
           <li><a onClick={toggleSmoothLinks} href="#Sobre">Sobre</a></li>
           <li><MenuLinks to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>
@@ -244,9 +253,20 @@ export default function Header({ toggleTheme, theme }) {
           }}
           initial="hidden"
           animate={open === true ? 'show' : 'hidden'}
+          role="menu"
+          id="menu"
         >
           <BoxIconCloseMenu>
-            <IconCloseMenu icon={faTimes} onClick={toggleMenu} />
+            <BtnMenu
+              id="closeMenu"
+              aria-haspopup="true"
+              aria-controls="menu"
+              aria-expanded="true"
+              aria-label="Fechar Menu"
+              onClick={toggleMenu}
+            >
+              <IconCloseMenu icon={faTimes} />
+            </BtnMenu>
           </BoxIconCloseMenu>
           <li><a onClick={toggleMenu} href="#Sobre">Sobre</a></li>
           <li><MenuLinks onClick={toggleMenu} to="/treinos-gratuitos">Treinos Gratuitos</MenuLinks></li>

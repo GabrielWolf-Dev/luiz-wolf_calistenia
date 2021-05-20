@@ -55,6 +55,9 @@ export default function Videos({ db }) {
                 <ContentTreinosMobile>
                   <BtnTreinosMobile
                     onClick={toggleShowList}
+                    aria-label={`Acessar exercícios de ${trains.type}`}
+                    aria-expanded={showTrain === trains.type ? 'true' : 'false'}
+                    aria-controls={`card${trains.id}`}
                     as={motion.button}
                     variants={{
                       show: { borderRadius: '12px 12px 0 0' },
@@ -78,6 +81,7 @@ export default function Videos({ db }) {
                       duration: 0.6,
                     }}
                     animate={showTrain === trains.type ? 'show' : 'hidden'}
+                    id={`card${trains.id}`}
                   >
                     {trains.exercises.map((datas) => <li key={datas.id}>{datas.exercise}</li>)}
                     <DefaultParagraph style={{ fontWeight: 500 }}>
