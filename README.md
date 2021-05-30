@@ -22,8 +22,6 @@ Many of datas that is being rendered from the site is being removed in "db.json"
   * [Babel](https://babeljs.io/)
   * [Webpack](https://webpack.js.org/)
 * HTML5
-* [dotenv(For hide the sensitives informations)](https://www.npmjs.com/package/dotenv)
-* [react-ga](https://github.com/react-ga/react-ga)
 * JSON
 * Deploy in the [Netlify](https://www.netlify.com/)
 
